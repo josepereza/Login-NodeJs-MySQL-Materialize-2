@@ -1,0 +1,82 @@
+<br>
+     
+<div class="row z-depth-3" style="background:rgba(255, 255, 219, 0.5); border-radius:8px" >
+
+    <form action="/buscar" method="post">
+        <div class="input-field col s12 m8 offset-m2 l8 offset-l2">
+
+            <select  name="busqueda" >
+                <option id="thema" value={{busqueda}}>Thema wählen</option>
+                <option value="general">General</option>
+                <option value="politics">Politk</option>
+                <option value="technologie">Technologie</option>
+                <option value="sport">Sports</option>
+                <option value="economy">Economy,Wirtschaft</option>
+                <option value="entertainment">Entertainment</option>
+                <option value="health">Health,Gesundheit</option>
+                <option value="science">Science</option>
+                 <option value="music">Music</option>
+
+            </select>
+            <select  name="pais">
+                <option value={{pais}}>Land</option>
+                <option value="de">Deutschland</option>
+                <option value="en">England</option>
+                <option value="es">Spanien</option>
+                <option value="fr">Frankreich</option>
+                <option value="it">Italien</option>
+                <option value="pt">Portual</option>
+            </select>
+            <span>
+            
+      <label>
+        <input name="pagina"  value=1 type="radio" checked />
+        <span>pagina 1</span>
+      </label>
+    
+   
+      <label>
+        <input name="pagina"   value=2 type="radio" />
+        <span>pagina2</span>
+      </label>
+    
+      <label>
+        <input name="pagina"   value=3 type="radio"  />
+        <span>pagina3</span>
+      </label>
+       <label>
+        <input name="pagina"   value=4 type="radio"  />
+        <span>pagina4</span>
+      </label>
+      <label>
+        <input name="pagina"   value=5 type="radio"  />
+        <span>pagina5</span>
+      </label>
+    
+    </span>
+            <input class="btn" type="submit" value="senden">
+        </div>
+      
+    </form>
+</div>
+    <h4 class="center-align teal lighten-2 ">{{busqueda}}/Pagina {{pagina}}</h4>
+
+<div class="card-container ">
+   
+    {{#each news2}}
+    <div class="card">
+        <div class="card-image center-align">
+            <img src="{{urlToImage}}" alt="Card image cap">
+        </div>
+        <div class="card-body">
+           <strong><p  class="card-content">{{title}}</p></strong> 
+           <p>{{description}}</p>
+            <p class="card-text">{{overview}}</p>
+            <a href="{{url}}">SOURCE</a>
+
+        </div>
+    </div>
+    {{else}}
+    <p>Empty news!!</p>
+    {{/each}}
+</div>

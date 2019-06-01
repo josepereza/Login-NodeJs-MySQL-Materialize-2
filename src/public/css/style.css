@@ -1,0 +1,124 @@
+header {
+  background-image: url("../img/bg_asphalt.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  color: #000;
+}
+
+.form.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* signin section */
+.form-signin-container {
+  margin: 5vh 0 0 0;
+}
+
+.form-signin {
+  padding: 100px 50px;
+  background-color: #ffffff80;
+  border-radius: 10px;
+}
+
+.title-signin {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+/* signup section */
+.form-signup-container {
+  margin: 5vh 0 0 0;
+}
+
+.form-signup {
+  padding: 50px 50px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+}
+
+.title-signup {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+/* helpers section */
+.btn-container {
+  padding: 5px;
+}
+
+.btn-container > a,
+.btn-container > button {
+  margin: 5px;
+}
+
+/* main section */
+.main {
+  display: flex;
+  flex-direction: column;
+  
+  
+}
+.main .wellcome-text {
+  text-align: center;
+  margin: 25vh 0 0 0;
+ 
+  
+}
+
+.main h3 {
+  color: #fff;
+}
+
+/* label color */
+   .input-field label {
+     color: red;
+   }
+.card-container {
+  display:flex;
+  width: 80%;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: auto;
+
+  
+}   
+.card {
+  width: 24% !important;
+  padding: 5px;
+  margin: 5px;
+}
+
+
+@media screen and (max-width: 1200px) {
+  body {
+    background-size: auto;
+  }
+
+  .form-signin {
+    padding: 25px;
+  }
+
+  .form-signup {
+      padding: 20px;
+  }
+}
+
+
+@media screen and (max-width: 800px) {
+  .card {
+    width: 45% !important;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .card {
+    width: 100% !important;
+  }
+  .card-container {
+   
+    width: 100%;
+  }
+}
